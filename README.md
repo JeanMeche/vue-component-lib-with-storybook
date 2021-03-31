@@ -15,13 +15,7 @@ npm run serve
 ## Build project
 
 ```
-npm run build-lib"
-```
-
-### Run your unit tests
-
-```
-npm run test:unit
+npm run build-lib
 ```
 
 ### Run your unit tests
