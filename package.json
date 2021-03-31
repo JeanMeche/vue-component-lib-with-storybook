@@ -4,11 +4,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "vue-cli-service build --target lib --name dummylib src/main.ts",
+    "build-lib": "vue-cli-service build --target lib --name dummylib src/index.ts",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build:types": "tsc --build tsconfigtypes.json"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -46,6 +47,7 @@
     "vue-loader": "^16.2.0"
   },
   "main": "./dist/dummylib.umd.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist/*"
   ]
