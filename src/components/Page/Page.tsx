@@ -1,21 +1,21 @@
-import { defineComponent } from "@vue/runtime-core";
-import { MyHeader } from "../Header/Header";
-import "./page.css";
+import { defineComponent } from '@vue/runtime-core';
+import { MyHeader } from '../Header/Header';
+import './page.css';
 
 export const Page = defineComponent({
   props: {
     user: Object,
   },
-  emits: ["login", "logout", "createAccount"],
+  emits: ['login', 'logout', 'createAccount'],
 
   setup: (props, ctx) => {
     return () => (
       <article>
         <MyHeader
           user={props.user}
-          on-login={ctx.emit("login")}
-          on-logout={ctx.emit("logout")}
-          on-createAccount={ctx.emit("createAccount")}
+          on-login={ctx.emit('login')}
+          on-logout={ctx.emit('logout')}
+          on-createAccount={ctx.emit('createAccount')}
         />
 
         <section>

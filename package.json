@@ -1,15 +1,15 @@
 {
   "name": "vue-component-lib-with-storybook",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "vue-cli-service build --target lib --name dummylib src/index.ts",
+    "build:lib": "rimraf dist && vue-cli-service build --target lib --name dummylib src/index.ts && npm run build:types",
+    "build:storybook": "build-storybook",
+    "build:types": "tsc --build tsconfigtypes.json",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build:types": "tsc --build tsconfigtypes.json"
+    "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -40,6 +40,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.0.0",
     "prettier": "^2.2.1",
+    "rimraf": "^2.7.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "typescript": "~4.1.5",

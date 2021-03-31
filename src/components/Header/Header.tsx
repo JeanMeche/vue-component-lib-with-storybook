@@ -1,6 +1,6 @@
-import { defineComponent } from "@vue/runtime-core";
-import { MyButton } from "../Button/Button";
-import "./header.css";
+import { defineComponent } from '@vue/runtime-core';
+import { MyButton } from '../Button/Button';
+import './header.css';
 
 export const MyHeader = defineComponent({
   props: {
