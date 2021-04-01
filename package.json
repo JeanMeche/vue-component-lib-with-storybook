@@ -1,12 +1,11 @@
 {
   "name": "vue-component-lib-with-storybook",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:lib": "rimraf dist && vue-cli-service build --target lib --name dummylib src/index.ts && npm run build:types",
+    "build:lib": "rimraf dist && vue-cli-service build --name dummylib --target lib  src/index.ts && tsc --emitDeclarationOnly -p tsconfig.json",
     "build:storybook": "build-storybook",
-    "build:types": "tsc --build tsconfigtypes.json",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006"
@@ -47,8 +46,8 @@
     "vue-jest": "^5.0.0-0",
     "vue-loader": "^16.2.0"
   },
-  "main": "./dist/dummylib.umd.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/dummylib.umd.js",
+  "types": "dist/src/index.d.ts",
   "files": [
     "dist/*"
   ]
